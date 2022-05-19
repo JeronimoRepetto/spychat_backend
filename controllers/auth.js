@@ -30,7 +30,7 @@ const createUser = async (req, res = response) => {
 
         res.json({
             ok: true,
-            user,
+            userDB: user,
             token
         });
 
