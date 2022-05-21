@@ -28,8 +28,10 @@ app.use(express.static(publicPath));
 
 //My Routes
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/users', require('./routes/user'));
+app.use('/api/messages', require('./routes/messages'));
 
-server.listen( process.env.PORT, (err) => {
+server.listen( process.env.PORT || 5000, (err) => {
 
     if( err ) throw new Error(err);
     console.log('Servidor corriendo en puerto',process.env.PORT);
